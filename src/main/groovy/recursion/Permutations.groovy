@@ -27,7 +27,7 @@ class Permutations {
         for (Integer i = currentIndex; i >= 0; i--) {
             swap(currentPermutation, currentIndex, i)
             permute(permutationList, currentPermutation, currentIndex - 1)
-//            swap(currentPermutation, currentIndex, i)
+            swap(currentPermutation, currentIndex, i)
         }
     }
 }
