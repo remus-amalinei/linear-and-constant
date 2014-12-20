@@ -16,18 +16,19 @@ class PermutationsTest extends Specification {
         List<List<Integer>> permutationList = new Permutations().generate(n)
 
         then:
-        containsNFactorialDistinctLists(permutationList, n, nFactorial)
+
+        containsDistinctListsOfSize(permutationList, nFactorial, n)
     }
 
-    private boolean containsNFactorialDistinctLists(List<List<Integer>> permutationList, Integer n, Integer nFactorial) {
-        Set<List<Integer>> set = (permutationList as Set<List<Integer>>)
+    static boolean containsDistinctListsOfSize(List<List<Integer>> listOfLists, Integer listOfListsCount, Integer listSize) {
+        Set<List<Integer>> set = (listOfLists as Set<List<Integer>>)
 
-        if (set.size() != nFactorial) {
+        if (set.size() != listOfListsCount) {
             return false
         }
 
-        for (permutation in permutationList) {
-            if (permutation.size() != n) {
+        for (list in listOfLists) {
+            if (list.size() != listSize) {
                 return false
             }
         }
