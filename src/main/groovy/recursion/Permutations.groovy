@@ -7,7 +7,7 @@ import static java.util.Collections.swap
  */
 class Permutations {
 
-    public List<List<Integer>> generate(Integer n) {
+    List<List<Integer>> generate(Integer n) {
         List<List<Integer>> permutationList = []
         List<Integer> currentPermutation = []
         1.upto(n) { i ->

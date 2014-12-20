@@ -14,7 +14,7 @@ class ColorMap {
         RED, GREEN, BLUE, WHITE
     }
 
-    public Map<String, Color> color(Map<String, List<String>> countryMap) {
+    Map<String, Color> color(Map<String, List<String>> countryMap) {
         Map<String, Color> countryColorMap = [:]
 
         for (country in countryMap.keySet()) {
