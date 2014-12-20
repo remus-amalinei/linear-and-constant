@@ -17,18 +17,24 @@ class PermutationsTest extends Specification {
 
         then:
 
-        containsDistinctListsOfSize(permutationList, nFactorial, n)
+        containsDistinctListsOfSize(permutationList, nFactorial, n, n)
     }
 
-    static boolean containsDistinctListsOfSize(List<List<Integer>> listOfLists, Integer listOfListsCount, Integer listSize) {
+    // TODO still difficult to read
+    static boolean containsDistinctListsOfSize(List<List<Integer>> listOfLists, Integer distinctListCount, Integer listSize, Integer maxValue) {
+        List<Integer> allElementsList = []
+        1.upto(maxValue) { i ->
+            allElementsList << i
+        }
+
         Set<List<Integer>> set = (listOfLists as Set<List<Integer>>)
 
-        if (set.size() != listOfListsCount) {
+        if (set.size() != distinctListCount) {
             return false
         }
 
         for (list in listOfLists) {
-            if (list.size() != listSize) {
+            if ((list.size() != listSize) || (!allElementsList.containsAll(list))) {
                 return false
             }
         }

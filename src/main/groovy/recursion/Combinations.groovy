@@ -26,8 +26,8 @@ class Combinations {
         }
 
         for (int i = currentIndex; i < n; i++) {
-            currentCombination[currentCombinationIndex] = (i + 1)
-            combine(combinationList, n, k, i + 1, currentCombination, currentCombinationIndex + 1)
+            currentCombination[currentCombinationIndex] = (i + 1);
+            combine(combinationList, n, k, i + 1, currentCombination, currentCombinationIndex + 1);
         }
     }
 }

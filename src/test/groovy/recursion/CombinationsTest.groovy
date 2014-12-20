@@ -17,6 +17,6 @@ class CombinationsTest extends Specification {
         List<List<Integer>> combinationList = new Combinations().generate(n, k)
 
         then:
-        PermutationsTest.containsDistinctListsOfSize(combinationList, expectedCombinationCount, k)
+        PermutationsTest.containsDistinctListsOfSize(combinationList, expectedCombinationCount, k, n)
     }
 }
