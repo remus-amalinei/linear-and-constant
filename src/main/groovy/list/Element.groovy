@@ -1,9 +1,7 @@
 package list
 
-import groovy.transform.Immutable
-import groovy.transform.ToString
-
 import javax.annotation.Generated
+
 /**
  * @author Remus Amalinei http://remus-amalinei.blogspot.com
  */
