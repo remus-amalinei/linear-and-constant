@@ -2,6 +2,7 @@ package list
 
 import spock.lang.Specification
 
+import static list.CycleHandler.breakCycle
 import static list.CycleHandler.calculateCycleLength
 
 /**
@@ -11,7 +12,7 @@ class CycleHandlerTest extends Specification {
 
     void 'should calculate the length of the cycle'() {
         given:
-        Element<Integer> listWithACycleOfLength3 = buildListWithACycleOfLength3()
+        Element<Integer> listWithACycleOfLength3 = listWithACycleOfLength3()
 
         when:
         Integer cycleLength = calculateCycleLength(listWithACycleOfLength3)
@@ -33,21 +34,8 @@ class CycleHandlerTest extends Specification {
     }
 
     void 'should return 0 for a list with no cycles'() {
-        given:
-        Element<Integer> head = new Element(
-                value: 1,
-                next: new Element<Integer>(
-                        value: 2,
-                        next: new Element(
-                                value: 3,
-                                next: new Element(
-                                        value: 4))))
-
-        when:
-        Integer cycleLength = calculateCycleLength(head)
-
-        then:
-        cycleLength == 0
+        expect:
+        calculateCycleLength(listWithNoCycle()) == 0
     }
 
     void 'should throw an IllegalArgumentException when the list to calculate cycle length for is null'() {
@@ -58,7 +46,28 @@ class CycleHandlerTest extends Specification {
         thrown(IllegalArgumentException)
     }
 
-    private Element<Integer> buildListWithACycleOfLength3() {
+    void 'should break cycle'() {
+        expect:
+        listWithNoCycle() == breakCycle(listWithACycleOfLength3())
+    }
+
+    void 'should not modify list if cycle does not exist'() {
+        expect:
+        listWithNoCycle() == breakCycle(listWithNoCycle())
+    }
+
+    private Element<Integer> listWithNoCycle() {
+        new Element(
+                value: 1,
+                next: new Element<Integer>(
+                        value: 2,
+                        next: new Element(
+                                value: 3,
+                                next: new Element(
+                                        value: 4))))
+    }
+
+    private Element<Integer> listWithACycleOfLength3() {
         // 1 -> 2 -> 3 -> 4
         //      \ <-<-<- /
 
