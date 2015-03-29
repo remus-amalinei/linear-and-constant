@@ -6,7 +6,7 @@ import groovy.transform.ToString
 import static backtracking.Sudoku.Cell.FIRST_CELL_OUTSIDE_GRID
 
 /**
- * @author Remus Amalinei http://remus-amalinei.blogspot.com
+ * @author Remus Amalinei
  */
 class Sudoku {
 

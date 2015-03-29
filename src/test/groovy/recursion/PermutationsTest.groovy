@@ -3,7 +3,7 @@ package recursion
 import spock.lang.Specification
 
 /**
- * @author Remus Amalinei http://remus-amalinei.blogspot.com
+ * @author Remus Amalinei
  */
 class PermutationsTest extends Specification {
 

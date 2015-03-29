@@ -6,7 +6,7 @@ package graph
  *
  * Hint: use the Four color theorem http://en.wikipedia.org/wiki/Four_color_theorem
  *
- * @author Remus Amalinei http://remus-amalinei.blogspot.com
+ * @author Remus Amalinei
  */
 class ColorMap {
 

@@ -3,7 +3,7 @@ package backtracking
 import spock.lang.Specification
 
 /**
- * @author Remus Amalinei http://remus-amalinei.blogspot.com
+ * @author Remus Amalinei
  *
  * Used 'A typical Sudoku puzzle', http://en.wikipedia.org/wiki/Sudoku
  */

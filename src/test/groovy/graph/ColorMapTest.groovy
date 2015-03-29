@@ -3,7 +3,7 @@ package graph
 import spock.lang.Specification
 
 /**
- * @author Remus Amalinei http://remus-amalinei.blogspot.com
+ * @author Remus Amalinei
  */
 class ColorMapTest extends Specification {
 

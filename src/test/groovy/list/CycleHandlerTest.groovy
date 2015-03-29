@@ -5,7 +5,7 @@ import spock.lang.Specification
 import static list.CycleHandler.calculateCycleLength
 
 /**
- * @author Remus Amalinei http://remus-amalinei.blogspot.com
+ * @author Remus Amalinei
  */
 class CycleHandlerTest extends Specification {
 

@@ -3,7 +3,7 @@ package recursion
 import static java.util.Collections.swap
 
 /**
- * @author Remus Amalinei http://remus-amalinei.blogspot.com
+ * @author Remus Amalinei
  */
 class Permutations {
 

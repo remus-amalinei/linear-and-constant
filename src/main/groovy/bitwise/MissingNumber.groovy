@@ -4,7 +4,7 @@ package bitwise
  * A list of numbers contains integers in the range 1 to 1,000,000,000. All numbers appear once except one which is
  * missing. Find the missing number.
  *
- * @author Remus Amalinei http://remus-amalinei.blogspot.com
+ * @author Remus Amalinei
  */
 class MissingNumber {
 
