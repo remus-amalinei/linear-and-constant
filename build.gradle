@@ -1,7 +1,4 @@
-apply plugin: 'java'
 apply plugin: 'groovy'
-
-sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
@@ -25,4 +22,11 @@ dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.3.7'
 
     testCompile 'org.spockframework:spock-core:0.7-groovy-2.0'
+}
+
+tasks.withType(Test) {
+    testLogging {
+        events 'passed', 'skipped', 'failed'
+        exceptionFormat 'full'
+    }
 }
