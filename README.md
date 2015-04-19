@@ -1,2 +1,3 @@
-linear-and-constant
+Linear and Constant
 ===================
+Efficient solutions for interesting problems.
